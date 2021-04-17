@@ -12,7 +12,7 @@
 import boto3
 
 s3 = boto3.resource('s3')
-bucket = s3.Bucket('<BUCKET_NAME>')
+bucket = s3.Bucket('catch-dragons')
 # the objects are available as a collection on the bucket object
 for obj in bucket.objects.all():
     print(obj.key, obj.last_modified)
